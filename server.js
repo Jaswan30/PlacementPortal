@@ -22,13 +22,13 @@ app.use('/api/auth', authRoutes);
 
 
 // // Serve React build
-const frontendPath = path.join(__dirname, 'build'); // if you run 'npm run build' in repo root
-app.use(express.static(frontendPath));
+// const frontendPath = path.join(__dirname, 'build'); // if you run 'npm run build' in repo root
+// app.use(express.static(frontendPath));
 
-// Catch-all for React routes
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
-});
+// // Catch-all for React routes
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.join(frontendPath, 'index.html'));
+// });
 
 
 // Connect to MongoDB
